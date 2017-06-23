@@ -1,0 +1,24 @@
+{
+  "recipes": [
+    {
+      "title": "Kale & Quinoa Salad",
+      "img": "img/recipe-quinoa.jpg",
+      "link": "http://allrecipes.com/recipe/229244/kale-and-quinoa-salad/"
+    },
+    {
+      "title": "Grilled Greens and Bacon",
+      "img": "img/recipe-bacon.jpg",
+      "link": "https://sarahinthekitchen.wordpress.com/2010/10/06/roasted-kale-with-bacon/"
+    },
+    {
+      "title": "Summer Sorghum and Baby Kale Salad",
+      "img": "img/recipe-sorghum.jpg",
+      "link": "https://foodgawker.com/post/2014/06/29/361944/"
+    },
+    {
+      "title": "Polenta with Kale Sauté",
+      "img": "img/recipe-polenta.jpg",
+      "link": "https://thefeedfeed.com/andreabemis/polenta-bowls-with-garlicky-summer-squash-and-kale-saut-and-sunny-side-up-egg"
+    }
+  ]
+}
