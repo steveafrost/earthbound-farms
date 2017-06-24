@@ -15,8 +15,8 @@ gulp.task('default', ['develop'])
 gulp.task('develop', ['browserSync', 'copyHTML', 'copyPHP', 'copyFonts', 'processSass'], function() {
   gulp.watch('source/*.html', ['copyHTML']);
   gulp.watch('source/*.php', ['copyPHP']);
-  gulp.watch('source/assets/css/**/*.scss', ['processSass']);
   gulp.watch('source/assets/img/*', ['imageMin']);
+  gulp.watch('source/assets/css/**/*.scss', ['processSass']);
   gulp.watch('source/assets/js/*', ['concatJS']);
 });
 
@@ -34,13 +34,15 @@ gulp.task('clean', function() {
 // Copy HTML from ./source to ./build
 gulp.task('copyHTML', function() {
   gulp.src('source/*.html')
-      .pipe(gulp.dest('build'));
+      .pipe(gulp.dest('build'))
+      .pipe(browserSync.reload({stream: true}));
 });
 
 // Copy PHP from ./source to ./build
 gulp.task('copyPHP', function() {
   gulp.src('source/*.php')
-      .pipe(gulp.dest('build'));
+      .pipe(gulp.dest('build'))
+      .pipe(browserSync.reload({stream: true}));
 });
 
 // Copy fonts from ./source/assets/font to ./build/assets/font
@@ -57,9 +59,7 @@ gulp.task('processSass', function() {
              .pipe(sourcemaps.write())
              .pipe(rename('styles.css'))
              .pipe(gulp.dest('build/assets/css/'))
-             .pipe(browserSync.reload({
-               stream: true
-             }))
+             .pipe(browserSync.reload({stream: true}));
 });
 
 // Process ./source/assets/js/* to ./build/assets/js/bundle.js
@@ -67,8 +67,9 @@ gulp.task('concatJS', function() {
   return gulp.src('source/assets/js/*')
              .pipe(sourcemaps.init())
              .pipe(concat('scripts.js'))
-             .pipe(gulp.dest('build/assets/js'))
              .pipe(sourcemaps.write())
+             .pipe(gulp.dest('build/assets/js'))
+             .pipe(browserSync.reload({stream: true}));
 });
 
 // Load browserSync to create local server & hot reload
@@ -84,5 +85,6 @@ gulp.task('browserSync', function() {
 gulp.task('imageMin', function() {
   return gulp.src('source/assets/img/*')
              .pipe(imagemin())
-             .pipe(gulp.dest('build/assets/img'));
+             .pipe(gulp.dest('build/assets/img'))
+             .pipe(browserSync.reload({stream: true}));
 });

@@ -8,6 +8,10 @@
   src: url('../font/proxima-nova.ttf');
 }
 
+html {
+  font-size: 100%;
+}
+
 body {
   font-family: $content-font;
 }
