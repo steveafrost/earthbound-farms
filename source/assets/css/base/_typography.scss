@@ -1,0 +1,22 @@
+@font-face {
+  font-family: 'Happy Caps';
+  src: url('../font/happy-caps-regular.otf');
+}
+
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url('../font/proxima-nova.ttf');
+}
+
+body {
+  font-family: $content-font;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: $headline-font;
+}
+

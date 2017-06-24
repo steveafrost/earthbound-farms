@@ -11,7 +11,7 @@ Mobile-first, SCSS variables, Gulp for task running, and minimal libraries
 - [x] Outline steps for creating page
 - [x] Setup Gulp for SASS preprocessing, JS concat, hot reload, and image optimization
 - [x] Include Normalize & jQuery ~~files in `../assets/*/vendors`~~ CDN links
-- [ ] Create SCSS variables in `../assets/css/base`
+- [ ] Create SCSS variables in `../assets/css/base` (ongoing)
 - [ ] Build HTML structure of page
 - [ ] Create SCSS files in `../assets/css/layout` to style each HTML section - body, header, nav, content, related, and footer
 - [ ] Style each HTML section using SCSS files in `../assets/css/layout`
