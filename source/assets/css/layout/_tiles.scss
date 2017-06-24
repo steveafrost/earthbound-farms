@@ -2,9 +2,21 @@
 
   .tile {
     margin: 0;
+    padding: 4rem 3rem;
 
-    .callout {
+    .overlay {
+      background-color: rgba(17,61,23,0.7);
+      color: $white;
       padding: 1rem;
+      margin: 0 auto;
+      text-align: center;
+      text-size: 4em;
     }
+  }
+
+  .tile-footer {
+    background-color: #f0efe8;
+    padding: 1rem;
+
   }
 }
