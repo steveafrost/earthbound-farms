@@ -9,7 +9,7 @@ Mobile-first, SCSS variables, Gulp for task running, and minimal libraries
 **Priorities**
 [x] Initial project setup
 [x] Outline steps for creating page
-[ ] Setup Gulp for image optimization, SASS processing, minifying, and live reload
+[x] Setup Gulp for SASS preprocessing, JS concat, hot reload, and image optimization
 [ ] Include Normalize & jQuery SCSS files in `../assets/css/vendors`
 [ ] Create SCSS variables in `../assets/css/base`
 [ ] Build HTML structure of page
