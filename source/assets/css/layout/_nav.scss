@@ -1,0 +1,23 @@
+nav {
+
+  li {
+    background-color: $light-green;
+    color: $white;
+    float: left;
+    font-size: 0.9em;
+    list-style: none;
+    margin-left: 0.5%;
+    padding: 0.5rem 0rem;
+    text-transform: uppercase;
+    text-align: center;
+    width: 33%;
+  }
+
+  li:first-child {
+    margin-left: 0%;
+  }
+
+  .active {
+    background-color: $dark-green;
+  }
+}

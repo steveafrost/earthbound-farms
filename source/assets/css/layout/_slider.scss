@@ -1,0 +1,34 @@
+.thumbnails {
+  width: 50%;
+  margin: 0 auto;
+
+  img {
+    float: left;
+    width: 33.33%;
+    height: auto;
+    margin-bottom: 2rem;
+  }
+
+  img.active {
+    background: rgba(39,62,84,0.82);
+  }
+}
+
+.slider {
+  padding: 0 1rem;
+
+  img {
+    float: left;
+    width: 50%;
+  }
+
+  .description {
+    color: $dark-green;
+    float: right;
+    width: 50%;
+
+    .suggestion {
+      color: $light-green;
+    }
+  }
+}

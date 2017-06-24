@@ -1,47 +1,19 @@
-.logo {
-  position: absolute;
-  top: 1rem;
-  left: 1rem;
-  height: 2rem;
-}
-
 header {
   height: 10rem;
   background: url("/assets/img/header-bg.jpg") no-repeat center center;
   background-size: cover;
 }
 
-nav {
-
-  ul {
-    margin: 0;
-    padding: 0;
-  }
-
-  li {
-    background-color: $light-green;
-    color: $white;
-    display: inline-block;
-    font-size: 0.9em;
-    margin-left: 0.5%;
-    padding: 0.5rem 0rem;
-    text-transform: uppercase;
-    text-align: center;
-    width: 33%;
-  }
-
-  li:first-child {
-    margin-left: 0%;
-  }
-
-  .active {
-    background-color: $dark-green;
-  }
+.handwriting {
+  display: block;
+  margin: 0 auto;
+  padding-top: 3em;
+  width: 20em;
 }
 
-.center-content {
-  margin: auto;
+.logo {
   position: absolute;
-  top: 0; left: 0; bottom: 0; right: 0;
-  width: 20rem;
+  top: 1rem;
+  left: 1rem;
+  height: 2rem;
 }
