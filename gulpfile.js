@@ -1,27 +1,69 @@
 var gulp = require('gulp'),
     sass = require('gulp-sass'),
+    clean = require ('gulp-clean'),
     concat = require('gulp-concat'),
+    rename = require('gulp-rename'),
     imagemin = require('gulp-imagemin'),
     sourcemaps = require('gulp-sourcemaps'),
+    runSequence = require('run-sequence'),
     browserSync = require('browser-sync').create();
 
 // Run all watches with simple `gulp` command
-gulp.task('default', ['watch'])
+gulp.task('default', ['develop'])
 
-// Process ./assets/css/main.scss to ./assets/css/main.css
-gulp.task('process-sass', function() {
+// Assemble hot reload, file copy, preprocessor, and watches to create dev environment
+gulp.task('develop', ['browserSync', 'copyHTML', 'copyPHP', 'copyFonts', 'processSass'], function() {
+  gulp.watch('source/*.html', ['copyHTML']);
+  gulp.watch('source/*.php', ['copyPHP']);
+  gulp.watch('source/assets/css/**/*.scss', ['processSass']);
+  gulp.watch('source/assets/img/*', ['imageMin']);
+  gulp.watch('source/assets/js/*', ['concatJS']);
+});
+
+// Run all build related tasks at once - excludes hot reload & watches
+gulp.task('build', function() {
+  runSequence('clean','copyHTML', 'copyPHP', 'copyFonts','processSass', 'concatJS', 'imageMin');
+})
+
+// Clean out build folder, be a good citizen
+gulp.task('clean', function() {
+  return gulp.src('build', {read: false})
+             .pipe(clean());
+})
+
+// Copy HTML from ./source to ./build
+gulp.task('copyHTML', function() {
+  gulp.src('source/*.html')
+      .pipe(gulp.dest('build'));
+});
+
+// Copy PHP from ./source to ./build
+gulp.task('copyPHP', function() {
+  gulp.src('source/*.php')
+      .pipe(gulp.dest('build'));
+});
+
+// Copy fonts from ./source/assets/font to ./build/assets/font
+gulp.task('copyFonts', function() {
+  gulp.src('source/assets/font/*')
+      .pipe(gulp.dest('build/assets/font'));
+});
+
+// Process ./source/assets/css/main.scss to ./build/assets/css/styles.css
+gulp.task('processSass', function() {
   return gulp.src('source/assets/css/main.scss')
              .pipe(sourcemaps.init())
              .pipe(sass())
              .pipe(sourcemaps.write())
+             .pipe(rename('styles.css'))
              .pipe(gulp.dest('build/assets/css/'))
              .pipe(browserSync.reload({
                stream: true
              }))
 });
 
-// Process ./assets/js/* to ./assets/js/bundle.js
-gulp.task('concat-and-uglify', function() {
+// Process ./source/assets/js/* to ./build/assets/js/bundle.js
+gulp.task('concatJS', function() {
   return gulp.src('source/assets/js/*')
              .pipe(sourcemaps.init())
              .pipe(concat('scripts.js'))
@@ -38,16 +80,9 @@ gulp.task('browserSync', function() {
   });
 });
 
-// Minify images in ./assets/img
-gulp.task('image-min', function() {
+// Minify images in ./source/assets/img and output to ./build/assets/img
+gulp.task('imageMin', function() {
   return gulp.src('source/assets/img/*')
              .pipe(imagemin())
              .pipe(gulp.dest('build/assets/img'));
-});
-
-// Assemble all tasks as watches in "one watch to rule them all"
-gulp.task('watch', ['browserSync', 'process-sass'], function() {
-  gulp.watch('source/assets/css/**/*.scss', ['process-sass']);
-  gulp.watch('source/assets/img/*', ['image-min']);
-  gulp.watch('source/assets/js/*', ['concat-and-uglify'])
 });
