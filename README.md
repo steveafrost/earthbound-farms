@@ -1,9 +1,11 @@
 # Earthbound Farms
 
 **Objective**
+
 Convert provided PSD into single web page using HTML/CSS/JS/PHP
 
 **Approach**
+
 Mobile-first, SCSS variables, Gulp for task running, and minimal libraries
 
 **Priorities**
