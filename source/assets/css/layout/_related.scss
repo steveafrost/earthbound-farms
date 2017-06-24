@@ -1,8 +1,9 @@
 .related {
+  @include border-image(1.25rem);
+
   color: $dark-green;
   font-size: 0;
-  padding: 1rem;
-  margin-bottom: 2rem;
+  padding: 2rem 1rem;
 
   img {
     display: inline-block;

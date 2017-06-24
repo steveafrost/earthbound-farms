@@ -1,4 +1,6 @@
 .about {
+  @include border-image(1.25rem);
+
   background: url('/assets/img/learn-story.jpg') center center;
   background-size: cover;
   color: white;
