@@ -22,7 +22,7 @@ gulp.task('develop', ['browserSync', 'copyHTML', 'copyPHP', 'copyFonts', 'proces
 
 // Run all build related tasks at once - excludes hot reload & watches
 gulp.task('build', function() {
-  runSequence('clean','copyHTML', 'copyPHP', 'copyFonts','processSass', 'concatJS', 'imageMin');
+  runSequence('clean', 'copyHTML', 'copyPHP', 'copyFonts','processSass', 'concatJS', 'imageMin');
 })
 
 // Clean out build folder, be a good citizen
