@@ -1,9 +1,10 @@
 .thumbnails {
   width: 50%;
   margin: 0 auto;
+  font-size: 0;
 
   img {
-    float: left;
+    display: inline-block;
     width: 33.33%;
     height: auto;
     margin-bottom: 2rem;
@@ -16,15 +17,17 @@
 
 .slider {
   padding: 0 1rem;
+  font-size: 0;
 
   img {
-    float: left;
+    display: inline-block;
     width: 50%;
   }
 
   .description {
     color: $dark-green;
-    float: right;
+    display: inline-block;
+    font-size: 1rem;
     width: 50%;
 
     .suggestion {

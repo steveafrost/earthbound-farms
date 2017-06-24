@@ -3,7 +3,7 @@ nav {
   li {
     background-color: $light-green;
     color: $white;
-    float: left;
+    display: inline-block;
     font-size: 0.9em;
     list-style: none;
     margin-left: 0.5%;
