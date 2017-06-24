@@ -10,11 +10,11 @@ gulp.task('default', ['watch'])
 
 // Process ./assets/css/main.scss to ./assets/css/main.css
 gulp.task('process-sass', function() {
-  return gulp.src('assets/css/main.scss')
+  return gulp.src('source/assets/css/main.scss')
              .pipe(sourcemaps.init())
              .pipe(sass())
              .pipe(sourcemaps.write())
-             .pipe(gulp.dest('assets/css/'))
+             .pipe(gulp.dest('build/assets/css/'))
              .pipe(browserSync.reload({
                stream: true
              }))
@@ -22,10 +22,10 @@ gulp.task('process-sass', function() {
 
 // Process ./assets/js/* to ./assets/js/bundle.js
 gulp.task('concat-and-uglify', function() {
-  return gulp.src('assets/js/*')
+  return gulp.src('source/assets/js/*')
              .pipe(sourcemaps.init())
              .pipe(concat('scripts.js'))
-             .pipe(gulp.dest('assets/js'))
+             .pipe(gulp.dest('build/assets/js'))
              .pipe(sourcemaps.write())
 });
 
@@ -33,21 +33,21 @@ gulp.task('concat-and-uglify', function() {
 gulp.task('browserSync', function() {
   browserSync.init({
     server: {
-      baseDir: './'
+      baseDir: 'build'
     },
   });
 });
 
 // Minify images in ./assets/img
 gulp.task('image-min', function() {
-  return gulp.src('assets/img/*')
+  return gulp.src('source/assets/img/*')
              .pipe(imagemin())
-             .pipe(gulp.dest('assets/img'));
+             .pipe(gulp.dest('build/assets/img'));
 });
 
 // Assemble all tasks as watches in "one watch to rule them all"
 gulp.task('watch', ['browserSync', 'process-sass'], function() {
-  gulp.watch('assets/css/**/*.scss', ['process-sass']);
-  gulp.watch('assets/img/*', ['image-min']);
-  gulp.watch('assets/js/*', ['concat-and-uglify'])
+  gulp.watch('source/assets/css/**/*.scss', ['process-sass']);
+  gulp.watch('source/assets/img/*', ['image-min']);
+  gulp.watch('source/assets/js/*', ['concat-and-uglify'])
 });
