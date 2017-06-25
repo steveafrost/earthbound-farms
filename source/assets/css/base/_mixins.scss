@@ -35,3 +35,11 @@
   max-height: $max-height;
   max-width: $max-width;
 }
+
+@mixin inner-container($width, $max-width) {
+  position: relative;
+  width: $width;
+  max-width: $max-width;
+  margin: 0 auto;
+  box-sizing: border-box;
+}

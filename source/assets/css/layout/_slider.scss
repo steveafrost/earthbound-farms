@@ -1,7 +1,7 @@
 .thumbnails {
   font-size: 0;
-  width: 50%;
   margin: 0 auto 1rem auto;
+  @include inner-container(50%, 64rem);
 
   .thumbnail {
     display: inline-block;
@@ -16,12 +16,11 @@
 .slider {
   font-size: 0;
   padding: 0 1rem;
-
+  @include inner-container(100%, 64rem);
   @include breakpoint(laptop) {
     margin: 0 auto;
     width: 80%;
   }
-
 
   .image {
     display: inline-block;

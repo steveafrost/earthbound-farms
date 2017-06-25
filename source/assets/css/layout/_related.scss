@@ -1,12 +1,17 @@
 .related {
-  @include border-image(1.25rem);
-
-  color: $dark-green;
   font-size: 0;
+  color: $dark-green;
   padding: 2rem 1rem;
+  @include border-image(1.25rem);
+  @include inner-container(100%, 64rem);
+
+  .product {
+    display: inline-block;
+    margin: 0 auto;
+    width: 33%;
+  }
 
   img {
-    display: inline-block;
-    width: 33%;
+    @include resp-image(17.3rem, 17.3rem)
   }
 }
