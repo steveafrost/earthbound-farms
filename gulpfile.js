@@ -3,6 +3,7 @@ var gulp = require('gulp'),
     clean = require ('gulp-clean'),
     concat = require('gulp-concat'),
     rename = require('gulp-rename'),
+    connect = require('gulp-connect-php'),
     imagemin = require('gulp-imagemin'),
     sourcemaps = require('gulp-sourcemaps'),
     runSequence = require('run-sequence'),
@@ -12,7 +13,7 @@ var gulp = require('gulp'),
 gulp.task('default', ['develop'])
 
 // Assemble hot reload, file copy, preprocessor, and watches to create dev environment
-gulp.task('develop', ['browserSync', 'copyHTML', 'copyPHP', 'copyFonts', 'processSass', 'concatJS'], function() {
+gulp.task('develop', ['connect-sync', 'copyHTML', 'copyPHP', 'copyFonts', 'processSass', 'concatJS'], function() {
   gulp.watch('source/*.html', ['copyHTML']);
   gulp.watch('source/*.php', ['copyPHP']);
   gulp.watch('source/assets/img/*', ['imageMin']);
@@ -78,6 +79,15 @@ gulp.task('browserSync', function() {
     server: {
       baseDir: 'build'
     },
+  });
+});
+
+// Enable PHP & BrowserSync to work together
+gulp.task('connect-sync', function() {
+  connect.server({ base: 'build' }, function(){
+    browserSync.init({
+      proxy: '127.0.0.1:8000'
+    });
   });
 });
 
