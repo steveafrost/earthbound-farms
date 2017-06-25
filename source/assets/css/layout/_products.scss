@@ -9,11 +9,11 @@
   }
 
   img {
-    @include resp-image(11rem, 11rem);
+    @include resp-image(10rem, 10rem);
   }
 }
 
-.slider {
+.products {
   font-size: 0;
   padding: 0 1rem;
   @include inner-container(100%, 64rem);

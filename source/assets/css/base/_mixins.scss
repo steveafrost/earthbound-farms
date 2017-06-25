@@ -1,20 +1,16 @@
-@mixin breakpoint($class) {
-  @if $class == phone {
+@mixin breakpoint($type) {
+  @if $type == phone {
     @media (max-width: $tablet - 1) { @content; }
   }
-
-  @else if $class == tablet {
+  @else if $type == tablet {
     @media (min-width: $tablet) { @content; }
   }
-
-  @else if $class == laptop {
+  @else if $type == laptop {
     @media (min-width: $laptop) { @content; }
   }
-
-  @else if $class == desktop {
+  @else if $type == desktop {
     @media (min-width: $desktop) { @content; }
   }
-
   @else {
     @warn "Breakpoint mixin supports: phone, tablet, laptop, and desktop";
   }
