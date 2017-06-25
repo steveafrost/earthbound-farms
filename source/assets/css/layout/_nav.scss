@@ -21,10 +21,6 @@ nav {
   li:first-child {
     margin-left: 0%;
   }
-
-  li.active {
-    background-color: $primary-green;
-  }
 }
 
 .sticky {
@@ -34,4 +30,9 @@ nav {
   top: 0;
   left: 0;
   z-index: 2;
+}
+
+.active {
+  background-color: $primary-green;
+  color: black;
 }
