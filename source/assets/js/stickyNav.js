@@ -1,9 +1,12 @@
 $(function() {
+  const nav = $('nav')
+  const stickyNavTop = nav.offset().top;
+
   $(window).scroll(function() {
-    if ($(this).scrollTop() >= 290) {
-      $('nav').addClass('sticky-nav');
+    if($(this).scrollTop() > stickyNavTop) {
+      nav.addClass('sticky');
     } else {
-      $('nav').removeClass('sticky-nav');
+      nav.removeClass('sticky');
     }
-  });
+  })
 });
