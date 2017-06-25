@@ -1,5 +1,5 @@
 .about {
-  @include border-image(1.25rem);
+  @include border-image(1rem);
 
   background: url('/assets/img/learn-story.jpg') center center;
   background-size: cover;
@@ -9,7 +9,7 @@
 
   h2 {
     background-color: rgba(46, 102, 138, 0.4);
-    border-radius: 0.25em;
+    border-radius: 0.25rem;
     width: 20rem;
     padding: 1rem;
   }
