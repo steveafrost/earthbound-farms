@@ -12,12 +12,12 @@ var gulp = require('gulp'),
 gulp.task('default', ['develop'])
 
 // Assemble hot reload, file copy, preprocessor, and watches to create dev environment
-gulp.task('develop', ['browserSync', 'copyHTML', 'copyPHP', 'copyFonts', 'processSass'], function() {
+gulp.task('develop', ['browserSync', 'copyHTML', 'copyPHP', 'copyFonts', 'processSass', 'concatJS'], function() {
   gulp.watch('source/*.html', ['copyHTML']);
   gulp.watch('source/*.php', ['copyPHP']);
   gulp.watch('source/assets/img/*', ['imageMin']);
   gulp.watch('source/assets/css/**/*.scss', ['processSass']);
-  gulp.watch('source/assets/js/*', ['concatJS']);
+  gulp.watch('source/assets/js/*.js', ['concatJS']);
 });
 
 // Run all build related tasks at once - excludes hot reload & watches
@@ -64,7 +64,7 @@ gulp.task('processSass', function() {
 
 // Process ./source/assets/js/* to ./build/assets/js/bundle.js
 gulp.task('concatJS', function() {
-  return gulp.src('source/assets/js/*')
+  return gulp.src('source/assets/js/*.js')
              .pipe(sourcemaps.init())
              .pipe(concat('scripts.js'))
              .pipe(sourcemaps.write())
