@@ -10,6 +10,14 @@
 
 html {
   font-size: 87.5%;
+
+  @include breakpoint(tablet) {
+    font-size: 100%;
+  }
+
+  @include breakpoint(laptop) {
+    font-size: 110%;
+  }
 }
 
 body {

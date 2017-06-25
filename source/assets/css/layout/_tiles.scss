@@ -1,8 +1,15 @@
 .tiles {
+  font-size: 0;
 
   .tile {
+    box-sizing: border-box;
     margin: 0;
     padding: 4rem 3rem;
+
+    @include breakpoint(tablet) {
+      display: inline-block;
+      width: 50%;
+    }
 
     .overlay {
       background-color: rgba(17,61,23,0.7);
@@ -17,6 +24,7 @@
 
   .tile-footer {
     background-color: #f0efe8;
+    font-size: 1rem;
     padding: 1rem 1rem 2rem 1rem;
     text-align: center;
   }
