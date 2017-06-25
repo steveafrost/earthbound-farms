@@ -1,23 +1,35 @@
 .thumbnails {
-  width: 50%;
-  margin: 0 auto;
   font-size: 0;
+  width: 50%;
+  margin: 0 auto 1rem auto;
 
-  img {
+  .thumbnail {
     display: inline-block;
     width: 33.33%;
-    height: auto;
-    margin-bottom: 1rem;
+  }
+
+  img {
+    @include resp-image(11rem, 11rem);
   }
 }
 
 .slider {
-  padding: 0 1rem;
   font-size: 0;
+  padding: 0 1rem;
 
-  img {
+  @include breakpoint(laptop) {
+    margin: 0 auto;
+    width: 80%;
+  }
+
+
+  .image {
     display: inline-block;
     width: 50%;
+
+    img {
+      @include resp-image(31.25rem, 31.25rem);
+    }
   }
 
   .description {

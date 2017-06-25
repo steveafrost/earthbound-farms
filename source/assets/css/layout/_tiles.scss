@@ -12,6 +12,10 @@
       width: 50%;
     }
 
+    @include breakpoint(desktop) {
+      width: 25%;
+    }
+
     .overlay {
       background-color: rgba(17,61,23,0.7);
       border-radius: 0.25em;

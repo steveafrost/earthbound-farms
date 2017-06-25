@@ -1,12 +1,3 @@
-@mixin border-image($height) {
-  border-style: solid;
-  border-width: 0px 0px $height;
-  -moz-border-image: url(/assets/img/border.png) 0 0 20 round;
-  -webkit-border-image: url(/assets/img/border.png) 0 0 20 round;
-  -o-border-image: url(/assets/img/border.png) 0 0 20 round;
-  border-image: url(/assets/img/border.png) 0 0 20 round;
-}
-
 @mixin breakpoint($class) {
   @if $class == phone {
     @media (max-width: $tablet - 1) { @content; }
@@ -20,11 +11,27 @@
     @media (min-width: $laptop) { @content; }
   }
 
-  @else if $class == laptop {
+  @else if $class == desktop {
     @media (min-width: $desktop) { @content; }
   }
 
   @else {
     @warn "Breakpoint mixin supports: phone, tablet, laptop, and desktop";
   }
+}
+
+@mixin border-image($height) {
+  border-style: solid;
+  border-width: 0px 0px $height;
+  -moz-border-image: url(/assets/img/border.png) 0 0 20 round;
+  -webkit-border-image: url(/assets/img/border.png) 0 0 20 round;
+  -o-border-image: url(/assets/img/border.png) 0 0 20 round;
+  border-image: url(/assets/img/border.png) 0 0 20 round;
+}
+
+@mixin resp-image($max-height, $max-width) {
+  height: auto;
+  width: 100%;
+  max-height: $max-height;
+  max-width: $max-width;
 }
