@@ -9,7 +9,7 @@
     min-height: 20rem;
 
     @include breakpoint(tablet) {
-      display: inline-flex;
+      display: inline-block;
       width: 50%;
     }
 
@@ -19,7 +19,6 @@
 
     .overlay {
       background-color: rgba(17,61,23,0.7);
-      border-radius: 0.25em;
       color: $white;
       padding: 1rem;
       margin: 0 auto;

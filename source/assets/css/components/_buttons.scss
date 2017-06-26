@@ -1,15 +1,15 @@
 .button {
   background-color: $light-green;
-  border-radius: 1em;
-  padding: 0.75rem;
+  border-radius: 1rem;
+  padding: 0.75rem 1rem 0.75rem 0.75rem;
   text-decoration: none;
   text-transform: uppercase;
   color: $white;
 
   &::after {
-    content: url('/assets/img/symbol-arrow.png');
+    content: url('/assets/img/symbol-arrow-dark.png');
     position: relative;
-    top: 0.5em;
-    left: 0.188em;
+    left: 0.5rem;
+    top: 0.4rem;
   }
 }

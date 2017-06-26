@@ -22,14 +22,15 @@ html {
 
 body {
   font-family: $content-font;
+  line-height: 1.75rem;
 }
 
 h1,
 h2,
 h3,
-h4,
-h5 {
+h4 {
   font-family: $headline-font;
+  line-height: 2rem;
 }
 
 h1 {

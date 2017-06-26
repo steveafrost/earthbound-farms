@@ -2,7 +2,6 @@
   font-size: 0;
   color: $dark-green;
   padding: 2rem 1rem;
-  @include border-image(1.25rem);
   @include inner-container(100%, 64rem);
 
   .product {
