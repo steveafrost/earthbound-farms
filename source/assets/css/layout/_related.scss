@@ -14,3 +14,7 @@
     @include resp-image(17.3rem, 17.3rem)
   }
 }
+
+.related-wrapper {
+  @include border-image(1rem);
+}

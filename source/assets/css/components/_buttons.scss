@@ -1,15 +1,14 @@
 .button {
   background-color: $light-green;
   border-radius: 1rem;
-  padding: 0.75rem 1rem 0.75rem 0.75rem;
+  padding: 0.75rem;
   text-decoration: none;
   text-transform: uppercase;
   color: $white;
 
-  &::after {
-    content: url('/assets/img/symbol-arrow-dark.png');
-    position: relative;
-    left: 0.5rem;
-    top: 0.4rem;
+  img {
+    vertical-align: top;
+    padding-left: 0.5rem;
+    width: 1.5rem;
   }
 }

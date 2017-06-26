@@ -35,16 +35,18 @@
 
       <?php include 'recipes.php'; ?>
 
-      <div class="related" id="related">
-        <h2>You May Also Like</h2>
-        <div class="product">
-          <img src="/assets/img/related-orgkale.jpg" alt="organic-kale">
-        </div>
-        <div class="product">
-          <img src="/assets/img/related-zen.jpg" alt="zen-deep-greens">
-        </div>
-        <div class="product">
-          <img src="/assets/img/related-power.jpg" alt="power-greens">
+      <div class="related-wrapper">
+        <div class="related" id="related">
+          <h2>You May Also Like</h2>
+          <div class="product">
+            <img src="/assets/img/related-orgkale.jpg" alt="organic-kale">
+          </div>
+          <div class="product">
+            <img src="/assets/img/related-zen.jpg" alt="zen-deep-greens">
+          </div>
+          <div class="product">
+            <img src="/assets/img/related-power.jpg" alt="power-greens">
+          </div>
         </div>
       </div>
 

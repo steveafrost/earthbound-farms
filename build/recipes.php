@@ -21,7 +21,7 @@ foreach($recipes as $index => $recipe) {
 }
 
 $HTML .= "<div class='recipe-footer'>";
-$HTML .= "<a href='#' class='button'>See All Kale Recipes</a>";
+$HTML .= "<a href='#' class='button'>See All Kale Recipes<img src='/assets/img/symbol-arrow-dark.png'></a>";
 $HTML .= "</div>";
 $HTML .= "</div>";
 $HTML .= "</div>";

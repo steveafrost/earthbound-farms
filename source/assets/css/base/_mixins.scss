@@ -18,7 +18,7 @@
 
 @mixin border-image($height) {
   border-style: solid;
-  border-width: $height 0px;
+  border-width: 0px 0px $height;
   -moz-border-image: url(/assets/img/border.png) 40 repeat;
   -webkit-border-image: url(/assets/img/border.png) 40 repeat;
   -o-border-image: url(/assets/img/border.png) 40 repeat;
@@ -38,4 +38,14 @@
   max-width: $max-width;
   margin: 0 auto;
   box-sizing: border-box;
+}
+
+@mixin columns($cols, $gap) {
+  -webkit-column-count: $cols;
+  -webkit-column-gap:   $gap;
+  -moz-column-count:    $cols;
+  -moz-column-gap:      $gap;
+  column-count:         $cols;
+  column-gap:           $gap;
+  line-height: 0;
 }
