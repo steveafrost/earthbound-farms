@@ -27,32 +27,7 @@
         </li>
       </nav>
 
-      <div id="product-info">
-        <div class="thumbnails">
-          <div class="thumbnail">
-            <img src="/assets/img/kale-green.jpg" alt="kale-green" class="active">
-          </div>
-          <div class="thumbnail">
-            <img src="/assets/img/kale-lacinato.jpg" alt="kale-lacinato">
-          </div>
-          <div class="thumbnail">
-            <img src="/assets/img/kale-red.jpg" alt="kale-red">
-          </div>
-        </div>
-
-        <div class="products">
-          <div class="image">
-            <img src="/assets/img/kale-green.jpg" alt="kale-green">
-          </div>
-          <div class="description">
-            <h2>Green Kale</h2>
-            <p>A hearty and sweetly flavorful nutrient powerhouse. Try it in soups, stews, braises and stir-frys.</p>
-            <p>Available in: <b>Bunch</b></p>
-            <p class="suggestion">Looking for kale salad blends?</p>
-            </p>
-          </div>
-        </div>
-      </div>
+      <?php include 'products.php'; ?>
 
       <div id="recipes">
         <div class="recipes">

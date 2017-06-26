@@ -1,0 +1,24 @@
+{
+  "products": [
+    {
+      "title": "Green Kale",
+      "img": "img/kale-green.jpg",
+      "desc": "A hearty and sweetly flavorful nutrient powerhouse. Try it in soups, stews, braises and stir-frys.",
+      "avail": ["Bunch"],
+      "related_text": "Looking for kale salad blends?",
+      "related_link": "http://www.earthboundfarm.com/products/category/organic-salads-greens/"
+    },
+    {
+      "title": "Lacinato Kale",
+      "img": "img/kale-lacinato.jpg",
+      "desc": "A chef’s favorite with deeply textured leaves and tender, mild flavor. Try roasting it or adding it to your favorite savory recipe.",
+      "avail": ["Bunch"]
+    },
+    {
+      "title": "Red Kale",
+      "img": "img/kale-red.jpg",
+      "desc": "A bold, peppery kale with sturdy leaves. Try it in stews and braises.",
+      "avail": ["Bunch"]
+    }
+  ]
+}

@@ -26,7 +26,7 @@ gulp.task('build', function() {
   runSequence('clean', 'copyHTML', 'copyPHP', 'copyFonts','processSass', 'concatJS', 'imageMin');
 })
 
-// Clean out build folder, be a good citizen
+// Clean out build folder, be a good citizen. Copy over any mock data after.
 gulp.task('clean', function() {
   return gulp.src('build', {read: false})
              .pipe(clean());
