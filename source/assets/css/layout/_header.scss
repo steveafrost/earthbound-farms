@@ -1,20 +1,36 @@
 header {
-  height: 10rem;
   background: url("/assets/img/header-bg.jpg") no-repeat center center;
   background-size: cover;
-}
-
-.handwriting {
-  display: block;
   margin: 0 auto;
-  padding-top: 3rem;
-  padding-bottom: 3rem;
-  width: 20em;
+  text-align: center;
+
+  .handwriting {
+    display: inline-block;
+    padding: 6rem 0rem 2rem 0rem;
+    width: 90%;
+
+    img {
+      @include resp-image(12.06rem, 48.81rem);
+    }
+  }
+
+  .logo {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    width: 5rem;
+
+    @include breakpoint(laptop) {
+      top: 2rem;
+      left: 3rem;
+    }
+
+    img {
+      @include resp-image(4.063rem, 5.313rem);
+    }
+  }
 }
 
-.logo {
-  position: absolute;
-  top: 1rem;
-  left: 1rem;
-  width: 4rem;
-}
+
+
+

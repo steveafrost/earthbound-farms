@@ -11,13 +11,17 @@
   <body>
     <div class="container">
       <header>
-        <a href="/"><img src="/assets/img/logo.png" alt="earthbound-farms-logo" class="logo"></a>
-        <img src="/assets/img/header-text.png" alt="kale-handwritten-text" class="handwriting">
+        <div class="logo">
+          <a href="/"><img src="/assets/img/logo.png" alt="earthbound-farms-logo"></a>
+        </div>
+        <div class="handwriting">
+          <img src="/assets/img/header-text.png" alt="kale-handwritten-text">
+        </div>
       </header>
 
       <nav>
         <li>
-         <a href="#product-info"">Product Info</a>
+         <a href="#product-info">Product Info</a>
         </li>
         <li>
           <a href="#recipes">Recipes</a>
@@ -31,18 +35,16 @@
 
       <?php include 'recipes.php'; ?>
 
-      <div id="related">
-        <div class="related">
-          <h2>You May Also Like</h2>
-          <div class="product">
-            <img src="/assets/img/related-orgkale.jpg" alt="organic-kale">
-          </div>
-          <div class="product">
-            <img src="/assets/img/related-zen.jpg" alt="zen-deep-greens">
-          </div>
-          <div class="product">
-            <img src="/assets/img/related-power.jpg" alt="power-greens">
-          </div>
+      <div class="related" id="related">
+        <h2>You May Also Like</h2>
+        <div class="product">
+          <img src="/assets/img/related-orgkale.jpg" alt="organic-kale">
+        </div>
+        <div class="product">
+          <img src="/assets/img/related-zen.jpg" alt="zen-deep-greens">
+        </div>
+        <div class="product">
+          <img src="/assets/img/related-power.jpg" alt="power-greens">
         </div>
       </div>
 
