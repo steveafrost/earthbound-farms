@@ -5,7 +5,7 @@ $data = file_get_contents($location);
 $products_array = json_decode($data, true);
 $products = $products_array['products'];
 
-$HTML = "<div id='product-info'><div class='thumbnails'>";
+$HTML = "<div id='product-info'><div class='thumbnail-wrapper'><div class='thumbnails'>";
 
 foreach ($products as $index => $product) {
   $product_index = $index;
@@ -16,7 +16,7 @@ foreach ($products as $index => $product) {
   $HTML .= "</div>";
 }
 
-$HTML .= '</div>';
+$HTML .= '</div></div>';
 
 foreach ($products as $index => $product) {
   $product_index = $index;

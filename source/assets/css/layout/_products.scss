@@ -1,15 +1,23 @@
+.thumbnail-wrapper {
+  font-size: 0;
+  background-color: #f6f6f6;
+}
+
 .thumbnails {
   font-size: 0;
-  margin: 0 auto 1rem auto;
+  text-align: center;
   @include inner-container(50%, 64rem);
 
   .thumbnail {
     display: inline-block;
-    width: 33.33%;
+    width: 33%;
+    @include breakpoint(tablet) {
+      width: auto;
+    }
   }
 
   img {
-    @include resp-image(10rem, 10rem);
+    @include resp-image(9rem, 9rem);
   }
 }
 
