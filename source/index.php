@@ -29,38 +29,7 @@
 
       <?php include 'products.php'; ?>
 
-      <div id="recipes">
-        <div class="recipes">
-          <div class="recipe" style="background-image: url('/assets/img/recipe-quinoa.jpg'); background-size: cover;">
-            <div class="overlay">
-              <h4>Kale & Quinoa Salad</h4>
-              <a href="#"><img src="/assets/img/symbol-arrow.png" alt="read-more"></a>
-            </div>
-          </div>
-          <div class="recipe" style="background-image: url('/assets/img/recipe-bacon.jpg'); background-size: cover;">
-            <div class="overlay">
-              <h4>Grilled Greens and Bacon</h4>
-              <a href="#"><img src="/assets/img/symbol-arrow.png" alt="read-more"></a>
-            </div>
-          </div>
-          <div class="recipe" style="background-image: url('/assets/img/recipe-sorghum.jpg'); background-size: cover;">
-            <div class="overlay">
-              <h4>Summer Sorghum and Baby Kale Salad</h4>
-              <a href="#"><img src="/assets/img/symbol-arrow.png" alt="read-more"></a>
-            </div>
-          </div>
-          <div class="recipe" style="background-image: url('/assets/img/recipe-polenta.jpg'); background-size: cover;">
-            <div class="overlay">
-              <h4>Polenta with Kale Saute</h4>
-              <a href="#"><img src="/assets/img/symbol-arrow.png" alt="read-more"></a>
-            </div>
-          </div>
-
-          <div class="recipe-footer">
-            <a href="#" class="button">See All Kale Recipes</a>
-          </div>
-        </div>
-      </div>
+      <?php include 'recipes.php'; ?>
 
       <div id="related">
         <div class="related">

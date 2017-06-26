@@ -5,8 +5,6 @@ $data = file_get_contents($location);
 $products_array = json_decode($data, true);
 $products = $products_array['products'];
 
-// var_dump($products);
-
 $HTML = "<div id='product-info'><div class='thumbnails'>";
 
 foreach ($products as $index => $product) {
@@ -48,19 +46,12 @@ foreach ($products as $index => $product) {
 
 echo $HTML;
 
-  // function recursiveIterator($array) {
-  //   foreach ($array as $key => $value) {
-  //     if (is_array($value)) {
-  //       recursiveIterator($value);
-  //     } else {
-  //       echo $key . '=>' . $value . '<br/>';
+// function recursiveIterator($array) {
+//   foreach ($array as $key => $value) {
+//     if (is_array($value)) {
+//       recursiveIterator($value);
+//     } else {
+//       echo $key . '=>' . $value . '<br/>';
 
-  //     }
-  //   }
-
-  //   unset($value);
-  // }
-
-  // recursiveIterator($products);
-
-  // $array_obj = new RecursiveIteratorIterator(new RecursiveArrayIterator($products));
+//     }
+//   }
