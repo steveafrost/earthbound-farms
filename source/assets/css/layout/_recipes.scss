@@ -1,11 +1,13 @@
 .recipes {
   font-size: 0;
+  vertical-align: bottom;
 
   .recipe {
     background-size: cover;
     box-sizing: border-box;
     margin: 0;
-    padding: 5rem 3rem;
+    padding: 10rem 3rem;
+    position: relative;
 
     @include breakpoint(tablet) {
       display: inline-block;
@@ -16,20 +18,25 @@
       width: 25%;
     }
 
+    // would love to refactor this to also use em's
     .overlay {
+      position: absolute;
+      left: 10%;
+      width: 70%;
+      height: auto;
+      top: 20%;
       background-color: rgba(17,61,23,0.7);
       color: $white;
       padding: 1rem;
       margin: 0 auto;
       text-align: center;
-      text-size: 4em;
     }
   }
 
   .recipe-footer {
     background-color: #f0efe8;
     font-size: 1rem;
-    padding: 1rem 1rem 2rem 1rem;
+    padding: 2rem;
     text-align: center;
   }
 }

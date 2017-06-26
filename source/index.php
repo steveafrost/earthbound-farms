@@ -52,7 +52,10 @@
 
       <div class="about">
         <h2>Certified Organic for a Healthier Everything</h2>
-        <a href="#" class="button">Learn Our Story</a>
+        <a href="#" class="button">
+          Learn Our Story
+          <img src='/assets/img/symbol-arrow-dark.png'>
+        </a>
       </div>
 
       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
