@@ -14,6 +14,7 @@
 }
 
 .product {
+  display: none;
   font-size: 0;
   padding: 0 1rem;
   @include inner-container(100%, 64rem);
@@ -39,8 +40,18 @@
     vertical-align: top;
     width: 50%;
 
-    .suggestion {
+    a {
       color: $light-green;
     }
   }
+}
+
+.current-product {
+  display: block;
+  transition: all 0.8s;
+}
+
+.current-thumbnail {
+  opacity: 0.5;
+  filter: alpha(opacity=50);
 }
